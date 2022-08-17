@@ -92,10 +92,6 @@ $app->configure('filesystems');
 //     App\Http\Middleware\CorsMiddleware::class,
 // ]);
 
-$app->middleware([
-	'Nord\Lumen\Cors\CorsMiddleware',
-]);
-
 $app->routeMiddleware([
     'auth' => App\Http\Middleware\Authenticate::class,
 ]);
@@ -117,7 +113,6 @@ $app->routeMiddleware([
 // $app->register(App\Providers\EventServiceProvider::class);
 // $app->register(App\Providers\CatchAllOptionsRequestProvider::class);
 $app->register(App\Providers\AuthServiceProvider::class);
-$app->register('Nord\Lumen\Cors\CorsServiceProvider');
 
 $app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
 $app->register(Illuminate\Filesystem\FilesystemServiceProvider::class);
