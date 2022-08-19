@@ -26,7 +26,7 @@ $router->group(['prefix' => 'v1'], function () use ($router) {
 
     // Prodi
     $router->get('/prodi', 'ProdiController@index');
-    // $router->get('/prodi/{id}', 'ProdiController@show');
+    $router->get('/prodi/detail/{id}', 'ProdiController@show');
     $router->get('/prodi/{slug}', 'ProdiController@showBySlug');
     $router->post('/prodi', 'ProdiController@store');
     $router->put('/prodi/{id}', 'ProdiController@update');
@@ -34,7 +34,7 @@ $router->group(['prefix' => 'v1'], function () use ($router) {
 
     // Matakuliah
     $router->get('/matakuliah', 'MatakuliahController@index');
-    // $router->get('/matakuliah/{id}', 'MatakuliahController@show');
+    $router->get('/matakuliah/detail/{id}', 'MatakuliahController@show');
     $router->get('/matakuliah/{slug}', 'MatakuliahController@showBySlug');
     $router->post('/matakuliah', 'MatakuliahController@store');
     $router->put('/matakuliah/{id}', 'MatakuliahController@update');

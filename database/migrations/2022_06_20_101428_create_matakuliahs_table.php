@@ -21,7 +21,7 @@ class CreateMatakuliahsTable extends Migration
             $table->integer('prodi_id')->unsigned()->index();
             $table->timestamps();
 
-            $table->foreign('prodi_id')->references('id')->on('matakuliahs')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('prodi_id')->references('id')->on('prodis')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

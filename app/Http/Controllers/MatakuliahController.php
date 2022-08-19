@@ -29,7 +29,7 @@ class MatakuliahController extends Controller
 
         return response()->json([
             'matkul' => $matkul
-        ],200);
+        ], 200);
     }
 
     public function showBySlug($slug)
